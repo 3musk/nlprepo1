@@ -1,9 +1,12 @@
 from tokenise_escape_words import TokeniseAndStopWords
-
+from speechtotext import speechtotext
 
 def menuDriven(choice):
     if(choice==1):
-        print("sorry")
+        string = speechtotext()
+        string.lower()
+        tk_sw=TokeniseAndStopWords(string)
+        tk_sw.token_and_stop_words()
     elif(choice==2):
         string=input()  #to enter the query asked by user
         string.lower()
