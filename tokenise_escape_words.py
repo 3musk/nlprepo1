@@ -2,6 +2,8 @@ from List_map import Attribute
 import nltk
 from nltk.corpus import stopwords 
 
+from parser_new import *
+
 from nltk.tokenize import word_tokenize 
 import csv
 from output import Final_Output
@@ -26,11 +28,15 @@ class TokeniseAndStopWords:
         #print(filtered_sentence) 
         tagged = nltk.pos_tag(word_tokens)  #filtered_sentence)
 
-        att=Attribute()
-        att.parse_attribute(tagged)
+        par=Parser_new()
+        par.parse_sentence(word_tokens)
 
-        qy=Calc_Query()
-        qy.read(tagged) 
+
+        #att=Attribute()
+        #att.parse_attribute(tagged)
+
+        #qy=Calc_Query()
+        #qy.read(tagged) 
 
         
         #print("this is print whole\n",tagged)
