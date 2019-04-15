@@ -117,7 +117,7 @@ class Parser_new:
         where_phrase = self.input_word_list[len(select_phrase) + len(from_phrase):]
         print("from phrase",from_phrase)
         print("where phrase",where_phrase)
-        print("columns of slect",columns_of_select)
+        print("columns of select",columns_of_select)
         print("column of where",columns_of_where)
 
         if(len(columns_of_select)==0):

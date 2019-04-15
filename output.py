@@ -24,7 +24,10 @@ class Final_Output:
             i=0
             for i in range(len(self.col_of_select)-1):
                 print(self.col_of_select[i],end=",")
-            print(self.col_of_select[i+1],end=" ")
+            if(len(self.col_of_select)==1):
+                print(self.col_of_select[i],end=" ")
+            else:
+                print(self.col_of_select[i+1],end=" ")
         print("FROM",end=" ")
         print(*self.table_name,end=" ")
         if(self.value_of_where is not None):
